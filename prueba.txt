@@ -117,14 +117,4 @@ class Menu extends CI_Controller
         redirect('menu/menu_perfiles/' . $menu_id);
     }
 
-    public function mp_asig()
-    {
-        $perfil_id = $this->uri->segment(3);
-        $menu_id   = $this->uri->segment(4);
-
-        $this->load->library('menu_PerfilLib');
-        $this->menu_perfillib->dar_acceso($perfil_id, $menu_id);
-        redirect('menu/menu_perfiles/' . $menu_id);
-    }
-
 }
